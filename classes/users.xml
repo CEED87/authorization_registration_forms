@@ -3,15 +3,15 @@
     <user>
         <login>AdminAdmin</login>
         <password>RbdtEWjmced08603d155a479f7ee882950339987</password>
-        <password_confirm>RbdtEWjmced08603d155a479f7ee882950339987</password_confirm>
+        <confirm_password>RbdtEWjmced08603d155a479f7ee882950339987</confirm_password>
         <email>admin@diweb.com</email>
-        <full_name>Dima</full_name>
+        <name>Dima</name>
     </user>
      <user>
         <login>CEEDCEED</login>
         <password>RbdtEWjmced08603d155a479f7ee882950339987</password>
-        <password_confirm>RbdtEWjmced08603d155a479f7ee882950339987</password_confirm>
+        <confirm_password>RbdtEWjmced08603d155a479f7ee882950339987</confirm_password>
         <email>ceed210787@gmail.com</email>
-        <full_name>Вася</full_name>
+        <name>Вася</name>
     </user>
-<user><login>CEED123</login><password>RbdtEWjmced08603d155a479f7ee882950339987</password><password_confirm>RbdtEWjmced08603d155a479f7ee882950339987</password_confirm><email>dzmitry.papok@scandiweb.com</email><full_name>tGGhjt</full_name></user><user><login>SERgio234</login><password>RbdtEWjmced08603d155a479f7ee882950339987</password><password_confirm>RbdtEWjmced08603d155a479f7ee882950339987</password_confirm><email>dzmitry.papok@diweb.com</email><full_name>Вася</full_name></user><user><login>Dima_Popok</login><password>RbdtEWjmced08603d155a479f7ee882950339987</password><password_confirm>RbdtEWjmced08603d155a479f7ee882950339987</password_confirm><email>papok.papok@scandiweb.com</email><full_name>EGOR</full_name></user></users>
+<user><login>CEED123</login><password>RbdtEWjmced08603d155a479f7ee882950339987</password><confirm_password>RbdtEWjmced08603d155a479f7ee882950339987</confirm_password><email>dzmitry.papok@scandiweb.com</email><name>Chir</name></user></users>

@@ -24,13 +24,13 @@
        <input type="password" name="password" placeholder="Enter password">
        <span></span>
        <label>Confirm password</label>
-       <input type="password" name="password_confirm" placeholder="Confirm the password">
+       <input type="password" name="confirm_password" placeholder="Confirm the password">
        <span></span>
        <label>Email</label>
        <input type="email" name="email" placeholder="Enter your email address">
        <span></span>
        <label>Name</label>
-       <input type="text" name="full_name" placeholder="Enter your full name">
+       <input type="text" name="name" placeholder="Enter your full name">
        <span></span>
        <button id="reg" type="button">Registration</button>
        <p>

@@ -28,31 +28,10 @@
 
             $this->userDatabase = $this->getUsers();
 
-            // print_r($this->userDatabase);
-
-            // if ($this->userData['password'] === $this->userData['password_confirm']) {
-
-                // $this->userData['password'] = $solt . md5($this->userData['password']);
-                // $this->userData['password_confirm'] = $solt . md5($this->userData['password_confirm']);
-            
-                // foreach ($this->userDatabase as $key => $value) {
-                //     if ($value['login'] === $this->userData['login']) {
-
-                //         $this->userData['user'] = [$value['login'] => 'exist'];
-                //         echo json_encode($this->userData,JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
-                //         exit();
-
-                //     } elseif ($value['email'] === $this->userData['email']) {
-
-                        // $this->userData['Email'] = [$value['email'] => 'exist'];
-                        // echo json_encode($this->userData,JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
-                        // exit();
-                //     } 
-                // }
-                if ($this->userData['password'] === $this->userData['password_confirm']) {
+                if ($this->userData['password'] === $this->userData['confirm_password']) {
 
                     $this->userData['password'] = $solt . md5($this->userData['password']);
-                    $this->userData['password_confirm'] = $solt . md5($this->userData['password_confirm']);
+                    $this->userData['confirm_password'] = $solt . md5($this->userData['confirm_password']);
                     
                     foreach ($this->userDatabase->children() as $value) {
                         foreach ($value as $user => $data) {
@@ -66,26 +45,17 @@
                                 exit();
                                 
                             }
-                        }
-                        // var_dump($value);
-                        // echo $value. "<br>";
-                        
+                        }    
                     }
                 
-                // $this->userDatabase[] = $this->userData;
-                // $this->userDatabase 
                 $user_xml = $this->userDatabase->addChild('user');
                 $user_xml->addChild('login', $this->userData['login']);
                 $user_xml->addChild('password', $this->userData['password']);
-                $user_xml->addChild('password_confirm', $this->userData['password_confirm']);
+                $user_xml->addChild('confirm_password', $this->userData['confirm_password']);
                 $user_xml->addChild('email', $this->userData['email']);
-                $user_xml->addChild('full_name', $this->userData['full_name']);
+                $user_xml->addChild('name', $this->userData['name']);
                 $this->userDatabase->asXML(__DIR__ . '/users.xml');
 
-            
-                // file_put_contents(__DIR__ . '/users.json', json_encode($this->userDatabase, JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE));
-              
-                
                 $this->userData['status'] = 'successfully';
                 echo json_encode($this->userData,JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
             } 

@@ -9,8 +9,6 @@ $("document").ready(function() {
             dataType: 'json',
             data: dataForm,
             success: function(data) {
-                // console.log(data)
-                // alert(data)
                 if (data.user) {
                     $("#mess").removeClass("userY").addClass("userN")
                     $("#mess").html('No user found with this username or password!')
@@ -18,8 +16,7 @@ $("document").ready(function() {
                 } 
                 else if (data.login == '' || data.password == '') {
                     $("#mess").removeClass("userY").addClass("userN")
-                    $("#mess").html('All fields must be filled!')
-                    
+                    $("#mess").html('All fields must be filled!') 
                 }
                 else
                 window.location.href = 'userAccount.php'   

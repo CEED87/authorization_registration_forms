@@ -15,7 +15,6 @@ $("document").ready(function () {
             dataType: 'json',
             data: dataForm,
             success: function (data) {
-// console.log(data)
                 if (data.user) {
                     $("#mess").html(messArr[0])
                     $("#mess").removeClass("userY").addClass("userN");
