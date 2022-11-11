@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    
+    // класс для авторизации пользователя
     class Profile extends ConnectDb 
     {
         private $usersDB;
@@ -20,12 +20,12 @@
             $this->usersDB = (array) $this->getUsers();
          
             $solt = 'RbdtEWjm';
-
+    // проверка на наличие пустых полей в форме
             if ($this->user['login'] === '' || $this->user['password'] === '') {
                 $this->profile = 1;
                 return $this->profile;
             }
-             
+    //  проверка на соответствие/несоответствие введённых данных пользователя
             foreach ($this->usersDB as $value) {
                 foreach ($value as $user => $data) {
                     $userData = (array) $data;
@@ -47,7 +47,7 @@
             if (gettype($this->checkUser()) == 'integer') {
                
                 echo json_encode($this->user,JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
-        
+    // авторизации (создание необходимых связей cookies + session + db)
             } elseif (gettype($this->checkUser()) == 'array') {
                
                 $name = $this->checkUser()['name'];

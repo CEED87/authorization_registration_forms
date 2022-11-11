@@ -1,13 +1,13 @@
 <?php
-    
+    // класс для подключения к базе данных
     class ConnectDb 
     {
-        private $xmlObj;
+        private $xmlDB;
     
         protected function getUsers() 
         { 
-            $this->jsonArr = simplexml_load_file(__DIR__ . '/users.xml'); 
-            return $this->jsonArr;
+            $this->xmlDB = simplexml_load_file(__DIR__ . '/users.xml'); 
+            return $this->xmlDB;
         }
     }
 

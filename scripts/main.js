@@ -4,6 +4,7 @@ const formReg = document.querySelector('#register');
 const btnReg = document.querySelector('#reg');
 const btnAut = document.querySelector('#aut');
 
+// функции проверки полей формы
 
 const checkLogin = (input) => {
     if (!/^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$/.test(input.value)) {
@@ -61,7 +62,7 @@ const checkName = (input) => {
     }
 }
 
-// Authorization form
+// форма авторизации
 
 if (formAuth){
     const checkInput = () => {
@@ -82,7 +83,7 @@ if (formAuth){
 }
 
 
-// Registration form
+// форма регистрации
 
 if (formReg) {
     const checkInput = () => {
